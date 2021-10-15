@@ -1,16 +1,16 @@
-<form>
+<form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
   <div class="form-control">
     <label for="task">Task</label>
-    <input type="text" name="task" id="task" placeholder="Add Task">
+    <input type="text" name="task" id="task" placeholder="Add Task" formControlName="text">
   </div>
   <div class="form-control">
     <label for="day">Day/Time</label>
-    <input type="text" name="day" id="day" placeholder="Add day in time">
+    <input type="text" name="day" id="day" placeholder="Add day in time" formControlName="day">
   </div>
   <div class="form-control form-control-check">
     <label for="reminder">Reminder</label>
-    <input type="checkbox" name="reminder" id="reminder">
+    <input type="checkbox" name="reminder" id="reminder" formControlName="reminder">
   </div>
 
-  <app-button innerButtonText="Create Task" color="green"></app-button>
+  <button class="btn btn-block"  type="submit">Create Task </button>
 </form>

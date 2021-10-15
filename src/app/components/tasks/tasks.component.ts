@@ -25,6 +25,12 @@ export class TasksComponent implements OnInit {
     })
   }
 
+  getTasks(): void {
+    this.taskService.getTasks().subscribe((data) => {
+      this.tasks = data;
+    });
+  }
+
   setReminder(task: Task) {
     this.taskService.updateTaskReminder(task).subscribe(() => {
       this.tasks = this.tasks.map(task => task);

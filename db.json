@@ -4,19 +4,31 @@
       "id": 1,
       "text": "Meeting at School 1",
       "day": "May 6th at 1:30pm",
-      "reminder": false
+      "reminder": true
     },
     {
       "id": 2,
       "text": "Meeting at School 2",
       "day": "May 6th at 1:30pm",
-      "reminder": false
+      "reminder": true
     },
     {
       "id": 3,
       "text": "Meeting at School 3",
       "day": "May 6th at 1:30pm",
-      "reminder": false
+      "reminder": true
+    },
+    {
+      "text": "Eufranio Diogo",
+      "day": "4 dias",
+      "reminder": false,
+      "id": 4
+    },
+    {
+      "text": "Creuma Kuzola",
+      "day": "12 dias",
+      "reminder": true,
+      "id": 5
     }
   ]
 }
