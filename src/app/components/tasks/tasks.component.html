@@ -1,3 +1,6 @@
+<app-add-task *ngIf="showTaskForm"></app-add-task>
+
 <ul class="task-list">
-  <app-task class="task-item" *ngFor="let task of tasks" [task]="task" (deleteTaskEmit)="deleteTask($event)"></app-task>
+  <app-task class="task-item" *ngFor="let task of tasks" [task]="task" (deleteTaskEmit)="deleteTask($event)" (setReminderEmit)="setReminder($event)"></app-task>
+  
 </ul>

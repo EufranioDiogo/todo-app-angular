@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'task-app-angular';
+  showTaskForm: boolean = false;
+
+  isTaskFormToShow(isTaskFormShowed: boolean): void {
+    this.showTaskForm = isTaskFormShowed;
+  }
 }

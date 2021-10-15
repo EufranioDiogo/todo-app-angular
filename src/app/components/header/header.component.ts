@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,17 +9,20 @@ export class HeaderComponent implements OnInit {
   appTitle: string = 'Task Tracker';
   isTaskFormShowed: boolean = false;
   innerButtonText: string = 'Add';
+  @Output() showAddTaskFromEmit = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  toogleAddTask() {
+  toogleAddTask(): void {
     this.isTaskFormShowed = !this.isTaskFormShowed;
+    console.log(this.isTaskFormShowed)
+    this.showAddTaskFromEmit.emit(this.isTaskFormShowed);
   }
 
-  getInnerButtonText(): string{
+  getInnerButtonText(): string {
     return this.isTaskFormShowed ? 'Close Form' : 'Add'
   }
 

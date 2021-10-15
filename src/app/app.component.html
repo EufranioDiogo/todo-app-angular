@@ -1,4 +1,4 @@
 <div class="container">
-  <app-header></app-header>
-  <app-tasks></app-tasks>
+  <app-header (showAddTaskFromEmit)="isTaskFormToShow($event)"></app-header>
+  <app-tasks [showTaskForm]="showTaskForm"></app-tasks>
 </div>

@@ -9,7 +9,7 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
 export class TaskComponent implements OnInit {
   @Input() task: Task = { id: -1, text: '', day: '', reminder: false };
   @Output() deleteTaskEmit = new EventEmitter();
-
+  @Output() setReminderEmit = new EventEmitter();
   faTimes = faTimes;
 
   constructor() {
@@ -20,5 +20,9 @@ export class TaskComponent implements OnInit {
 
   deleteTask(id: number | undefined): void {
     this.deleteTaskEmit.emit(id);
+  }
+
+  setReminder(task: Task | undefined): void {
+    this.setReminderEmit.emit(task);
   }
 }
